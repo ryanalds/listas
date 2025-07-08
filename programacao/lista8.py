@@ -76,4 +76,64 @@
 
 # -------------------------------------------------------------------------------------------------------------------
 
-# 
+#Blobs:
+
+# n = int(input())
+# lista = []
+# dias = 0
+# total_dias = []
+# for i in range(n):
+#     lista.append(float(input()))
+
+# for i in range(len(lista)):
+#     dias = 0
+#     while not lista[i] <= 1:
+#         lista [i] = lista[i] / 2
+#         dias += 1
+#     total_dias.append(dias)
+    
+# for i in total_dias:
+#     print(i,'dias')
+#------------------------------------------------------------------------------------------------
+#Alarme despertador:
+
+# lista_tempo = []
+ 
+# while True:
+#     h_1,m_1,h_2,m_2 = map(int,input().split())
+#     if h_1 != 0 or h_2 != 0 or m_1 != 0 or m_2 != 0:
+#         if h_1 < h_2:
+#             lista_tempo.append((((h_2 - h_1) * 60)+ m_2 - m_1))
+#         if h_1 > h_2:
+#                 lista_tempo.append((((23 + h_2 - h_1)* 60)+ (60- m_1 + m_2)))
+#         if h_1 == h_2:
+#             if m_1 > m_2:
+#                 lista_tempo.append(1380 + (60- m_1 + m_2))
+#             else:
+#                 lista_tempo.append(m_2 - m_1)
+ 
+#     else:
+#         for i in lista_tempo:
+#             print(i)
+#         break
+#------------------------------------------------------------------------------------------------------
+#Troco:
+
+# casos_teste = int(input())
+# troco = []
+# troco_max = []
+# for i in range(casos_teste):
+#     valor,marca = map(int,input().split())
+#     precos = list(map(float,input().split()))[:marca]
+#     for i in range(len(precos)):
+#         if valor >= precos[i] and precos[i] != 0:
+#             troco.append(valor%precos[i])
+#         else:
+#             continue
+#     if troco:
+#         troco_max.append(max(troco))
+#         troco.clear()
+#     else: 
+#         troco_max.append(0.0)
+# for j in troco_max:
+#     print(f'{j:.2f}')
