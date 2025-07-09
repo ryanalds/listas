@@ -117,6 +117,7 @@
 #             print(i)
 #         break
 #------------------------------------------------------------------------------------------------------
+
 #Troco:
 
 # casos_teste = int(input())
@@ -137,3 +138,96 @@
 #         troco_max.append(0.0)
 # for j in troco_max:
 #     print(f'{j:.2f}')
+
+#------------------------------------------------------------------------------------------------------
+
+# Loop musical:
+
+# def loop(num):
+
+#     lista_frequencias = list(map(int, input().split()))[:num]
+
+#     picos = 0
+
+#     lista_frequencias.insert(0, lista_frequencias[-1])
+#     lista_frequencias.append(lista_frequencias[1])
+
+#     for i in range(0, len(lista_frequencias)-2):
+
+#         if lista_frequencias[i] > lista_frequencias[i+1] < lista_frequencias[i+2]:
+#             picos += 1
+
+#         if lista_frequencias[i] < lista_frequencias[i+1] > lista_frequencias[i+2]:
+#             picos += 1
+
+#     return picos
+
+# lista_picos = []
+
+# while True:
+#     numero = int(input())
+#     if numero == 0:
+#         break
+#     else:
+#         lista_picos.append(loop(numero))
+
+# for valor in lista_picos:
+#     print(valor) 
+
+#------------------------------------------------------------------------------------------------------
+
+# Senha:
+
+# def senha():
+
+#     num = int(input())
+#     lista_oleosidade = list(map(float, input().split()))
+#     lista_indice = []
+#     i = 0
+
+#     while i < num:
+
+#         maior = lista_oleosidade.index(max(lista_oleosidade))
+#         lista_oleosidade[maior] = 0
+#         lista_indice.append(maior)
+
+#         i += 1
+
+#     return lista_indice
+
+# senhas = []
+
+# while True:
+#     try:
+#         senhas.append(senha())
+#     except EOFError:
+#         break
+
+# for i in range(len(senhas)):
+#     print(f'Caso {i+1}: {"".join(map(str, senhas[i]))}')
+
+#------------------------------------------------------------------------------------------------------
+
+# Mergulho:
+
+# a, b = map(int, input().split())
+
+# lista_voltaram = list(map(int, input().split()))
+
+# lista_mergulhadores = []
+
+# lista_morreram = []
+
+# mortos = ''
+
+# for i in range(1, a + 1):
+#     lista_mergulhadores.append(i)
+
+# for mergulhador in lista_mergulhadores:
+#     if mergulhador not in lista_voltaram:
+#         mortos += str(mergulhador ) +' '
+
+# if len(lista_voltaram) == len(lista_mergulhadores):
+#     print('*')
+# else:
+#     print(mortos) 
